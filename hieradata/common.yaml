@@ -18,7 +18,8 @@ ntp::servers:
         - 2.europe.pool.ntp.org
         - 3.europe.pool.ntp.org
 
-ssh::server:storeconfigs_enabled: false
+ssh::storeconfigs_enabled: false
+ssh::server::storeconfigs_enabled: false
 ssh::server::options:
         Protocol: '2'
         UsePAM: 'yes'
