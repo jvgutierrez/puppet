@@ -3,6 +3,7 @@ classes:
         - epel
         - installer
         - ntp
+        - users
 
 installer::epel_packages:
         - htop
@@ -17,7 +18,7 @@ ntp::servers:
         - 3.europe.pool.ntp.org
 
 users::users:
-        - nico:
+        nico:
                 groups:
                         - wheel
-                ssh_key: 'AAAAB4NzaC1yc2EAAAABIwAAAQEA3yELdne/GLEUh8rd1KEigIXf66iG11OlOorxE9NPeZ17fM7NbqmkISgbIwFNHPqnnj/hHxD+PW+kiWWZT8TFOWnmV9CkYRPzu+6LA6amU2AMrQPdsfR2/0zAqnWlZx+1YOC4rQawhmHoHUTp0Vyy376/8i4Jlit2MZlahcDzVcaC2G4Oq3n4sKHNdBpsFUtacqga3A9Hgxe3NW12XWethQ2ilYNY2IqL2veK3xmZN1zcEWj+viXLhuer8/Dk3TBpCGe3b3NMRcUH22GnsTWtnGQ46oozy9+1d2HaWJZdcIFXVrPkvBNs0wZ0SKwTRJ2L2GdrAzOMEEPeRVbDG4BfuQ=='
+                ssh_key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEA3yELdne/GLEUh8rd1KEigIXf66iG11OlOorxE9NPeZ17fM7NbqmkISgbIwFNHPqnnj/hHxD+PW+kiWWZT8TFOWnmV9CkYRPzu+6LA6amU2AMrQPdsfR2/0zAqnWlZx+1YOC4rQawhmHoHUTp0Vyy376/8i4Jlit2MZlahcDzVcaC2G4Oq3n4sKHNdBpsFUtacqga3A9Hgxe3NW12XWethQ2ilYNY2IqL2veK3xmZN1zcEWj+viXLhuer8/Dk3TBpCGe3b3NMRcUH22GnsTWtnGQ46oozy9+1d2HaWJZdcIFXVrPkvBNs0wZ0SKwTRJ2L2GdrAzOMEEPeRVbDG4BfuQ=='

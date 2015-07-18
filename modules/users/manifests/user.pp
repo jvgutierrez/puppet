@@ -5,13 +5,14 @@ define users::user(
   $ssh_key = 'undef',
 )
 {
-  ::user { $name:
+  user { $name:
     ensure         => present,
     purge_ssh_keys => true,
     groups         => $groups,
+    home           => "/home/${name}",
   }
 
-  ::ssh_authorized_key { "${name}@${::fqdn}":
+  ssh_authorized_key { "${name}@${::fqdn}":
     user => $name,
     type => $ssh_key_type,
     key  => $ssh_key,
