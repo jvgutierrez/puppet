@@ -1,0 +1,8 @@
+---
+classes:
+        - installer
+
+installer::packages:
+        - htop
+installer::ruby_gems:
+        - hiera-eyaml
