@@ -11,7 +11,7 @@ class installer(
   }
   
   if $epel_packages {
-    package { $packages:
+    package { $epel_packages:
       ensure  => installed,
       require => Yumrepo['epel'],
     }
