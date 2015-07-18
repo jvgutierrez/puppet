@@ -1,5 +1,6 @@
 ---
 classes:
+        - epel
         - installer
 
 installer::packages:
