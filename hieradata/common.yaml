@@ -3,7 +3,7 @@ classes:
         - epel
         - installer
 
-installer::packages:
+installer::epel_packages:
         - htop
 installer::ruby_gems:
         - hiera-eyaml
