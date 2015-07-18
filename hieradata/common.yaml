@@ -4,6 +4,7 @@ classes:
         - installer
         - ntp
         - users
+        - ssh::server
 
 installer::epel_packages:
         - htop
@@ -16,6 +17,19 @@ ntp::servers:
         - 1.europe.pool.ntp.org
         - 2.europe.pool.ntp.org
         - 3.europe.pool.ntp.org
+
+ssh::server:storeconfigs_enabled: false
+ssh::server::options:
+        Protocol: '2'
+        UsePAM: 'yes'
+        PasswordAuthentication: 'no'
+        PermitRootLogin: 'no'
+        AcceptEnv: 'LANG LANGUAGE LC_*'
+        HostKey: '/etc/ssh/ssh_host_rsa_key'
+        Subsystem: 'sftp /usr/libexec/openssh/sftp-server'
+        Ciphers: 'aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr'
+        MACs: 'hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,hmac-ripemd160'
+        KexAlgorithms: 'diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1'
 
 users::users:
         nico:
