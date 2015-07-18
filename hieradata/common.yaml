@@ -5,6 +5,9 @@ classes:
         - ntp
         - users
         - profiles::ssh 
+        - fw::pre
+        - fw::post
+        - firewall
 
 installer::epel_packages:
         - htop
