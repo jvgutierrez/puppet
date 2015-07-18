@@ -4,7 +4,7 @@ classes:
         - installer
         - ntp
         - users
-        - ssh::server
+        - profiles::ssh 
 
 installer::epel_packages:
         - htop
