@@ -1,4 +1,4 @@
-class ssh
+class profiles::ssh
 {
   include ::ssh
   $ssh_options = hiera('ssh::server::options')
