@@ -1,0 +1,12 @@
+---
+classes:
+    - roles::kvmserver
+
+libvirt::mdns_adv: false
+libvirt_networks:
+    direct:
+        autostart: true
+        forward_mode: bridge
+        forward_dev: br0
+        forward_interfaces:
+            - eth0
