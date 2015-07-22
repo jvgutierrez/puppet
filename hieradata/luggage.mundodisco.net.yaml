@@ -10,3 +10,10 @@ libvirt_networks:
         ip:
                 - address: 192.168.43.1
                   netmask: 255.255.255.0
+
+libvirt_pools:
+    images_pool:
+        type: 'dir'
+        ensure: 'present'
+        active: true
+        target: '/var/lib/libvirt/images'
