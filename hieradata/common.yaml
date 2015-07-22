@@ -4,7 +4,6 @@ classes:
         - installer
         - ntp
         - users
-        - profiles::ssh 
         - fw::pre
         - fw::post
         - firewall
